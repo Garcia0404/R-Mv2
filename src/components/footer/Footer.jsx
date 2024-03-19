@@ -4,8 +4,6 @@ export const Footer = ({ page }) => {
   const navigate = useNavigate()
   let p = []
   let n = parseInt(page) + 10
-  console.log(n)
-
   for (let i = page; i < n && i<=42; i++) {
     p.push(
       <ChangePage page={page} key={i} number={i} />
