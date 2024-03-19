@@ -8,7 +8,7 @@ export const Context = createContext();
 // Crear el proveedor del contexto
 export const AppContext = ({ children }) => {
   const [favorites,setFavorites] = useState([])
-  const { data, error } = useSWR('https://rickandmortyapi.com/api/character/?page=20',
+  const { data, error } = useSWR('https://rickandmortyapi.com/api/character',
     url => axios.get(url).then(res => res.data.results));
   if (!data) return
   if (error) return <div>Error al cargar</div>

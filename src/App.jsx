@@ -1,7 +1,7 @@
 
 import { useContext } from 'react';
 import { Context } from './context/AppContext'
-import { CharacterCard } from './components';
+import { CharacterCard, Footer } from './components';
 
 export const App = () => {
   const { data } = useContext(Context)
@@ -15,6 +15,7 @@ export const App = () => {
           ))
         }
       </main>
+      <Footer/>
     </div>
   );
 }

@@ -9,11 +9,10 @@ export const MainPage = () => {
   const url = `https://rickandmortyapi.com/api/character/?page=${page}`
   const { data, error } = useSWR(url,
     url => axios.get(url).then(res => res.data.results));
-  console.log(data)
   if (error) return <div>Error</div>;
   if(!data) return <Load/>;
   return (
-    <div>MainPage {page}
+    <div>
       <main className='p-3 grid grid-cols-auto-fit tablet:grid-cols-3 gap-3 tablet:max-w-screen-tablet mx-auto'>
         {
           data.map((character, index) => (
