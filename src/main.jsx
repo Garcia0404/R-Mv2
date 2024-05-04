@@ -3,11 +3,14 @@ import { AppContext } from './context/AppContext.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom';
 import { AppRouter } from './pages/Router/AppRouter.jsx';
+import { NextUIProvider } from '@nextui-org/react';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <AppContext>
-      <AppRouter />
+      <NextUIProvider>
+        <AppRouter />
+      </NextUIProvider>
     </AppContext>
   </BrowserRouter>
 )

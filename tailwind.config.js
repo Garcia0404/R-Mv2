@@ -1,8 +1,10 @@
+const { nextui } = require("@nextui-org/react");
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
@@ -13,13 +15,14 @@ export default {
         'redHeart': '#EE2844',
       },
       gridTemplateColumns: {
-        'auto-fit': 'repeat(auto-fit, minmax(200px, 1fr))'
+        'auto-fit': 'repeat(auto-fit, minmax(250px, 1fr))'
       },
       screens: {
-        'tablet': '650px',
+        'tablet': '900px',
         'mobileLg': '500px',
       }
     },
   },
-  plugins: [],
+  darkMode: "class",
+  plugins: [nextui()]
 }
